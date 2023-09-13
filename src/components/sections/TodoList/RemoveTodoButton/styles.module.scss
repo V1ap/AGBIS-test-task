@@ -1,0 +1,57 @@
+@import "src/styles/vars.scss";
+
+.modal__removeTodoBtn,
+.removeTodoBtn {
+  border-radius: 10px;
+  background-color: $redColor;
+  border-color: $redColor;
+  box-shadow: none;
+
+  &:hover {
+    color: $redColor;
+  }
+}
+
+.modal {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "text text" "removeBtn cancelBtn";
+  padding: 40px;
+  background-color: $whiteColor;
+  border-radius: 20px;
+}
+
+.modal__text {
+  grid-area: text;
+  font-size: 20px;
+  line-height: 24px;
+  color: $blackColor;
+}
+
+.modal__removeTodoBtn {
+  grid-area: removeBtn;
+}
+
+.modal__cancelBtn {
+  grid-area: cancelBtn;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .removeTodoBtn {
+    grid-area: removeTodoBtn;
+    max-width: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .modal {
+    justify-items: center;
+    width: 80vw;
+    padding: 20px;
+
+    &__text {
+      text-align: center;
+    }
+  }
+}

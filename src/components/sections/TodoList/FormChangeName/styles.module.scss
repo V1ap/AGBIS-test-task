@@ -1,0 +1,84 @@
+@import "src/styles/vars.scss";
+
+.todoItem__form {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  grid-template-columns: calc(100% - 200px - 200px) 180px 180px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.todoItem__input {
+  padding: 3px;
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid $lightGrayColor;
+  border-radius: 0;
+  box-shadow: none;
+  transition: border-color 0.5s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $darkGrayColor;
+  }
+}
+
+.todoItem__cancelBtn {
+  max-width: 250px;
+  border-radius: 10px;
+  border-color: $redColor;
+  background-color: $redColor;
+  box-shadow: none;
+
+  &:hover {
+    color: $redColor;
+  }
+}
+
+.todoItem__submitBtn {
+  max-width: 250px;
+  border-radius: 10px;
+  background-color: $blueColor;
+  border-color: $blueColor;
+  box-shadow: none;
+
+  &:hover {
+    color: $blueColor;
+  }
+}
+
+@media (max-width: 1024px) {
+  .todoItem__form {
+    grid-template-columns: repeat(2, calc(50% - 20px));
+    grid-template-areas:
+      "input input"
+      "submitBtn cancelBtn";
+  }
+
+  .todoItem__input {
+    grid-area: input;
+  }
+
+  .todoItem__cancelBtn {
+    grid-area: cancelBtn;
+    max-width: none;
+  }
+
+  .todoItem__submitBtn {
+    grid-area: submitBtn;
+    max-width: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .todoItem__form {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "input"
+      "submitBtn"
+      "cancelBtn";
+    gap: 10px;
+  }
+}

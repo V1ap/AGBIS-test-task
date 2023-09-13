@@ -1,0 +1,17 @@
+@import "src/styles/vars.scss";
+
+.input {
+  padding: 20px;
+  border: 2px solid $darkGrayColor;
+  border-radius: 20px;
+  font-size: 24px;
+  line-height: 28px;
+  color: $darkGrayColor;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: border-color 0.5s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $lightGrayColor;
+  }
+}

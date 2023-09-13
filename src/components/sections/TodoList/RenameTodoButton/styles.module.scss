@@ -1,0 +1,20 @@
+@import "src/styles/vars.scss";
+
+.renameTodoBtn {
+  max-width: 190px;
+  background-color: $blueColor;
+  border-color: $blueColor;
+  border-radius: 10px;
+  box-shadow: none;
+
+  &:hover {
+    color: $blueColor;
+  }
+}
+
+@media (max-width: 1024px) {
+  .renameTodoBtn {
+    grid-area: renameTodoBtn;
+    max-width: none;
+  }
+}

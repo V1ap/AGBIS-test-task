@@ -1,0 +1,46 @@
+@import "src/styles/vars.scss";
+
+.todoItem {
+  display: grid;
+  grid-template-columns: 45px calc(100% - 65px - 200px - 200px) 180px 180px;
+  gap: 20px;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid $darkGrayColor;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  &.isRename {
+    grid-template-columns: 45px calc(100% - 65px);
+  }
+}
+
+.todoItem__name {
+  overflow: hidden;
+  overflow-wrap: break-word;
+  font-size: 24px;
+  line-height: 28px;
+  color: $darkGrayColor;
+}
+
+@media (max-width: 1024px) {
+  .todoItem {
+    grid-template-columns: 45px repeat(2, calc(50% - 50px));
+    grid-template-areas: "isDoneCheckbox name name" ". renameTodoBtn removeTodoBtn";
+    align-items: flex-start;
+  }
+
+  .todoItem__name {
+    grid-area: name;
+  }
+}
+
+@media (max-width: 620px) {
+  .todoItem {
+    grid-template-columns: 45px repeat(2, calc(50% - 35px));
+    gap: 10px;
+    grid-template-areas: "isDoneCheckbox name name" ". renameTodoBtn renameTodoBtn" ". removeTodoBtn removeTodoBtn";
+    padding: 10px;
+    text-align: center;
+  }
+}

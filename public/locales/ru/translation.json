@@ -1,0 +1,26 @@
+{
+  "newTodo": {
+    "errorNoName": "Дело не может быть пустым",
+    "placeholder": "Название дела",
+    "buttonName": "Добавить дело"
+  },
+  "filter": {
+    "header": "Фильтр по статусу дела:",
+    "filterItem-All": "Все",
+    "filterItem-Completed": "Только выполненные",
+    "filterItem-NotCompleted": "Только не выполненные"
+  },
+  "changeLanguage": {
+    "header": "Выберите язык"
+  },
+  "todoList": {
+    "renameTodo": "Переименовать",
+    "deleteTodo": "Удалить",
+    "acceptRenameTodo": "Принять",
+    "cancelRenameTodo": "Отменить",
+    "placeholderRenameTodo": "Введите новое название",
+    "modalText": "Вы уверены что хотите удалить это дело ?"
+  },
+  "Yes": "Да",
+  "No": "Нет"
+}

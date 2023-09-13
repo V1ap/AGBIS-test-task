@@ -1,0 +1,27 @@
+@import "src/styles/vars.scss";
+
+.isDoneCheckbox {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border: 2px solid $darkGrayColor;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.isDoneCheckbox__icon {
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  transform: scale(0) rotate(-0.5turn);
+  transition: transform 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+  .isDoneCheckbox {
+    grid-area: isDoneCheckbox;
+  }
+}

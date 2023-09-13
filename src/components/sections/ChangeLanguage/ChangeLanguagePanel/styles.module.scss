@@ -1,0 +1,42 @@
+@import "src/styles/vars.scss";
+
+.changeLanguagePanel__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 300px;
+  width: 300px;
+  padding: 10px;
+  border: 2px solid $darkGrayColor;
+  background-color: $lightGrayColor;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.changeLanguagePanel__item {
+  flex: 0 0 45%;
+
+  &.active .changeLanguagePanel__btn {
+    background-color: $darkGrayColor;
+    color: $whiteColor;
+  }
+}
+
+.changeLanguagePanel__btn {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid $darkGrayColor;
+  border-radius: 10px;
+  background-color: transparent;
+  color: $darkGrayColor;
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+@media (max-width: 620px) {
+  .changeLanguagePanel__list {
+    flex-direction: column;
+    padding: 20px;
+    width: 80%;
+  }
+}

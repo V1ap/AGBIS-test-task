@@ -1,0 +1,30 @@
+.main {
+  display: grid;
+  grid-template-areas:
+    "newTodo newTodo"
+    "filter changeLanguage"
+    "todoList todoList";
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 1460px;
+  padding: 30px;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "newTodo"
+      "filter"
+      "changeLanguage"
+      "todoList";
+    justify-content: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .main {
+    padding: 10px;
+  }
+}

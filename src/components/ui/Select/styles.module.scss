@@ -1,0 +1,87 @@
+@import "src/styles/vars.scss";
+
+.select__container {
+  position: relative;
+  max-width: 300px;
+}
+
+.select__btn {
+  height: 50px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid $darkGrayColor;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $blackColor;
+  background-color: $lightGrayColor;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  &:hover {
+    background-color: $darkGrayColor;
+    color: $whiteColor;
+  }
+}
+
+.select__list {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  top: 50px;
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  overflow: auto;
+  background-color: $lightGrayColor;
+  border: 1px solid $blackColor;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 6px 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grayColor;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
+  }
+
+  scrollbar-width: 2px;
+  scrollbar-color: $grayColor;
+}
+
+.select__item {
+  width: 100%;
+}
+
+.select__itemBtn {
+  width: 100%;
+  border: none;
+  height: 50px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.5s ease;
+
+  &:hover {
+    background-color: $darkGrayColor;
+    color: $whiteColor;
+  }
+}
+
+@media (max-width: 1024px) {
+  .select__list {
+    max-height: 200px;
+  }
+}

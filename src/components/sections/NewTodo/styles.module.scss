@@ -1,0 +1,47 @@
+@import "src/styles/vars.scss";
+
+.newTodo {
+  grid-area: newTodo;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.newTodo__form {
+  position: relative;
+  display: grid;
+  grid-template-columns: calc(100% - 200px) 180px;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.newTodo__error {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  white-space: nowrap;
+  color: $redColor;
+}
+
+@media (max-width: 620px) {
+  .newTodo {
+    width: auto;
+    padding: 10px;
+  }
+
+  .newTodo__form {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .newTodo__input {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .newTodo__btn {
+    border-radius: 10px;
+  }
+}
